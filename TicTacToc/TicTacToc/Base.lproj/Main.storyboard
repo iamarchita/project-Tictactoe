@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mE4-Ys-mGY">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="QEV-JL-knq">
+            <objects>
+                <navigationController id="BBX-dI-88M" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="TJl-3v-LQu"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zmn-CO-KRC">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfq-Zh-htj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2433" y="-13"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="0qD-h8-5hA">
+            <objects>
+                <viewController storyboardIdentifier="mainViewController" id="mE4-Ys-mGY" customClass="MainViewController" customModule="TicTacToc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ocg-q7-9uw">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TIC TAC TOE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4u-4R-Kb5">
+                                <rect key="frame" x="60" y="109" width="273" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvV-vw-mzR">
+                                <rect key="frame" x="120" y="668" width="153" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vxO-We-bUC"/>
+                                </constraints>
+                                <color key="tintColor" red="0.87058818339999999" green="0.60000002379999995" blue="0.36078432199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="PLAY NOW!"/>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="mE4-Ys-mGY" eventType="touchUpInside" id="IN1-tA-Dyb"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tictactoe" translatesAutoresizingMaskIntoConstraints="NO" id="ObS-X6-mtK">
+                                <rect key="frame" x="60" y="282.66666666666669" width="280" height="300.00000000000006"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nl2-LM-5PG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ObS-X6-mtK" firstAttribute="height" secondItem="ocg-q7-9uw" secondAttribute="height" multiplier="0.352113" id="34c-J4-22C"/>
+                            <constraint firstItem="n4u-4R-Kb5" firstAttribute="top" secondItem="Nl2-LM-5PG" secondAttribute="top" constant="50" id="FBb-Yq-EBh"/>
+                            <constraint firstItem="Nl2-LM-5PG" firstAttribute="trailing" secondItem="n4u-4R-Kb5" secondAttribute="trailing" constant="60" id="FPV-oV-Eg6"/>
+                            <constraint firstItem="Nl2-LM-5PG" firstAttribute="bottom" secondItem="kvV-vw-mzR" secondAttribute="bottom" constant="100" id="PC7-EI-Ij3"/>
+                            <constraint firstItem="Nl2-LM-5PG" firstAttribute="trailing" secondItem="ObS-X6-mtK" secondAttribute="trailing" constant="53" id="RYT-VX-cWf"/>
+                            <constraint firstItem="ObS-X6-mtK" firstAttribute="top" secondItem="n4u-4R-Kb5" secondAttribute="bottom" constant="140" id="UR8-ZJ-TJg"/>
+                            <constraint firstItem="ObS-X6-mtK" firstAttribute="leading" secondItem="Nl2-LM-5PG" secondAttribute="leading" constant="60" id="deD-Q8-qNe"/>
+                            <constraint firstItem="Nl2-LM-5PG" firstAttribute="trailing" secondItem="kvV-vw-mzR" secondAttribute="trailing" constant="120" id="h2e-Gi-6p7"/>
+                            <constraint firstItem="kvV-vw-mzR" firstAttribute="leading" secondItem="Nl2-LM-5PG" secondAttribute="leading" constant="120" id="kEW-cK-Ix8"/>
+                            <constraint firstItem="n4u-4R-Kb5" firstAttribute="leading" secondItem="Nl2-LM-5PG" secondAttribute="leading" constant="60" id="qDG-4U-f4W"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mb5-uW-qK3"/>
+                    <connections>
+                        <outlet property="image" destination="ObS-X6-mtK" id="OM6-3m-LDu"/>
+                        <outlet property="playNow" destination="kvV-vw-mzR" id="Gvb-t0-ded"/>
+                        <outlet property="tictactoe" destination="n4u-4R-Kb5" id="n2c-oA-kTl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r71-LH-JiL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-674.04580152671758" y="-5.6338028169014089"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="playGame" id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="board" translatesAutoresizingMaskIntoConstraints="NO" id="5Rf-KQ-inz">
+                                <rect key="frame" x="0.0" y="164" width="393" height="294"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fE5-Nb-Dqt">
+                                <rect key="frame" x="55" y="164" width="93" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DJD-BA-JIj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rD2-tI-ytf">
+                                <rect key="frame" x="149" y="164" width="93" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nkO-5L-j1f"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ca-AC-Yag">
+                                <rect key="frame" x="55" y="263" width="93" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fzO-wM-ydY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3f5-tQ-GGn">
+                                <rect key="frame" x="150" y="261" width="93" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kzc-bB-SGb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9df-No-LmJ">
+                                <rect key="frame" x="243" y="164" width="93" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2GF-t8-mLV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDU-i3-3Gw">
+                                <rect key="frame" x="55" y="357" width="93" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a2N-dv-r3C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dya-kl-kqg">
+                                <rect key="frame" x="149" y="357" width="93" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F5u-O5-QoS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRI-he-Jj3">
+                                <rect key="frame" x="243" y="261" width="93" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B0O-ce-0nm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppE-N0-aoP">
+                                <rect key="frame" x="245" y="357" width="93" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5XH-qh-mjp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJQ-qH-8cH">
+                                <rect key="frame" x="110" y="625" width="195" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play Again!"/>
+                                <connections>
+                                    <action selector="PlayAgain:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YqP-S9-Qcl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dW-6O-3tE">
+                                <rect key="frame" x="55" y="86" width="304" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR1-Q9-WRe">
+                                <rect key="frame" x="300" y="59" width="93" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="multiply.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cqd-Em-8MN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GR1-Q9-WRe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="300" id="66C-Zp-enN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GR1-Q9-WRe" secondAttribute="trailing" id="fE2-Tg-l6C"/>
+                            <constraint firstItem="GR1-Q9-WRe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tkL-SY-xE6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="58e-LA-bJv"/>
+                    <connections>
+                        <outlet property="eighthButton" destination="Dya-kl-kqg" id="d0c-sd-YsW"/>
+                        <outlet property="fifthButton" destination="3f5-tQ-GGn" id="EMn-NU-KXi"/>
+                        <outlet property="firstButton" destination="fE5-Nb-Dqt" id="io2-Ox-t9j"/>
+                        <outlet property="forthButton" destination="0ca-AC-Yag" id="AOu-dN-3ZH"/>
+                        <outlet property="label" destination="5dW-6O-3tE" id="e3R-Nh-dB7"/>
+                        <outlet property="ninthButton" destination="ppE-N0-aoP" id="GbR-1w-ykc"/>
+                        <outlet property="playAgainButton" destination="oJQ-qH-8cH" id="ebh-lK-LOZ"/>
+                        <outlet property="secondButton" destination="rD2-tI-ytf" id="icb-C5-mNS"/>
+                        <outlet property="seventhButton" destination="gDU-i3-3Gw" id="QsY-xw-GbW"/>
+                        <outlet property="sixthButton" destination="pRI-he-Jj3" id="sLS-DX-BSN"/>
+                        <outlet property="thirdButton" destination="9df-No-LmJ" id="Mhh-KX-Mtm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788.54961832061065" y="-13.380281690140846"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="board" width="420" height="420"/>
+        <image name="multiply.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="tictactoe" width="1000" height="617"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
